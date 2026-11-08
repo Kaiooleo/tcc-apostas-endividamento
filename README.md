@@ -17,7 +17,7 @@ Código e dados do Trabalho de Conclusão de Curso "Os impactos da expansão das
 ## Como reproduzir
 
 1. Baixe o repositório (botão "Code" > "Download ZIP") e descompacte.
-2. No R, defina a pasta do repositório como diretório de trabalho (`setwd`) ou abra o script a partir dela.
+2. Abra o `TCC_final.R` no RStudio. O script define sozinho a pasta do repositório como diretório de trabalho. Fora do RStudio, rode-o a partir da própria pasta.
 3. Rode `TCC_final.R`. Os pacotes necessários são instalados automaticamente. A execução leva de 10 a 15 minutos, por causa do bootstrap wild com 999 replicações.
 4. As saídas são salvas em `resultados/final/`.
 

@@ -37,8 +37,12 @@
 # 0. Configuração ------------------------------------------------------------------
 rm(list = ls())
 options(scipen = 999)
-# Ajuste para a pasta onde o repositório foi baixado:
-# setwd("caminho/para/a/pasta")
+# Diretório de trabalho: a pasta onde está este script. No RStudio, isso é
+# feito automaticamente; fora dele, rode o script a partir da própria pasta.
+if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+  caminho <- rstudioapi::getActiveDocumentContext()$path
+  if (nzchar(caminho)) setwd(dirname(caminho))
+}
 
 # dplyr e tidyr por último: o vars carrega o MASS, que esconderia o select().
 pacotes <- c("GetBCBData", "sidrar", "gtrendsR", "seasonal", "lubridate", "vars",
